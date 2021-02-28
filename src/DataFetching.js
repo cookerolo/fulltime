@@ -8,7 +8,7 @@ const DataFetching = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("https://api.github.com/repos/cookerolo/acountsys/commits")
+      .get("https://api.github.com/repos/cookerolo/fulltime/commits")
       .then((res) => {
         setCommits(res.data);
       })
