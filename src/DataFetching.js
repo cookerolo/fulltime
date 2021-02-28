@@ -17,7 +17,7 @@ const DataFetching = () => {
   }, []);
   return (
     <div className="container">
-      <h4 class="font-weight-bold pt-4 pb-3">Commit history for Github Fulltime Project</h4>
+      <h4 className="font-weight-bold pt-4 pb-3">Commit history for Github Fulltime Project</h4>
 
       <ul className="list-group">
         {loading && <p className="alert alert-warning">Loading...</p>}
