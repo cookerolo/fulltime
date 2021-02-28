@@ -17,7 +17,7 @@ const DataFetching = () => {
   }, []);
   return (
     <div className="container">
-      <h4 class="font-weight-bold pt-4 pb-3">Commit history for this Github Project</h4>
+      <h4 class="font-weight-bold pt-4 pb-3">Commit history for Github Fulltime Project</h4>
 
       <ul className="list-group">
         {loading && <p className="alert alert-warning">Loading...</p>}
@@ -28,7 +28,9 @@ const DataFetching = () => {
         )}
         {commits.map((commit, i) => (
           <li key={i} className="list-group-item d-flex justify-content-between align-items-center">
-            {commit.commit.message} by {commit.author.login}
+            <p>
+              <strong>{commit.commit.message}</strong> <em>by {commit.author.login}</em>
+            </p>
             <span className="badge badge-info badge-pill">
               {new Date(Date.parse(commit.commit.author.date)).toLocaleString()}
             </span>
