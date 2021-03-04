@@ -12,15 +12,15 @@ const DataFetching = () => {
       .then((res) => {
         setCommits(res.data);
       })
-      .catch((err) => setFetchError(err.message));
-    setLoading(false);
-  }, []);
+      .catch((err) => setFetchError(err.message))
+      .finally(setLoading(false));
+  }, [loading]);
   return (
     <div className="container">
       <h4 className="font-weight-bold pt-4 pb-3">Commit history for Fulltime Project</h4>
 
       <ul className="list-group">
-        {loading && <p className="alert alert-warning">Loading...</p>}
+        {loading ? <p className="alert alert-warning">Loading...</p> : false}
         {fetchError && (
           <div className="alert alert-danger" role="alert">
             {fetchError}

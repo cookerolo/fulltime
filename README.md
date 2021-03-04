@@ -5,6 +5,7 @@ This project was created using React with Axios for data fetching and Bootstrap 
 To build and run the server clone this repository, change directory to the project directoy and then run:
 
 ```
+cd fulltime
 npm install
 npm start
 ```
